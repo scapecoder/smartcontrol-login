@@ -1,0 +1,24 @@
+#stage {
+        width: 100%;
+        max-width: 360px;
+        height: 36px;
+        margin: 20px 0 16px 0;
+        background: url('logo_sd.png') no-repeat;
+        background-position: center 0;
+}
+
+
+/* Switch image */
+.entry .switch {
+	position: absolute;
+	top: 16px;
+	left: 10px;
+	width: 53px;
+	height: 43px;
+	background: url('on_off_sd.png') no-repeat;
+	background-position: 0 -49px;
+}
+
+.state1  .switch {
+	background-position: 0 0;
+}

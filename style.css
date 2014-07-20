@@ -1,0 +1,185 @@
+@font-face { font-family: cambria; src: url(cambria.ttc); }
+@font-face { font-family: ostrich; src: url(ostrich.ttf); }
+@font-face { font-family: trench; src: url(trench100free.otf); }
+@font-face { font-family: timeburn; src: url(timeburner_regular.ttf); }
+
+#cont {
+padding: 10px;
+}
+
+.webcam {
+width: 74%;
+height: auto;
+border-radius: 5px;
+margin-right: 13%;
+margin-left: 13%;
+margin-bottom: 10px;
+}
+
+.logout{
+bottom: 5px;
+text-decoration: none;
+color: #737373;
+font-family: timeburn;
+}
+body {
+  background-color:#343434;
+  color: white;
+  font-size: 0.6em;
+  font-family: cambria;
+}
+
+a:link, a:visited { text-decoration: none; }
+
+#stage {
+	width: 100%;
+	max-width: 360px;
+	height: 36px;
+	margin: 20px 0 16px 0;
+	background: url('logo.png') no-repeat;
+	background-position: center 0;
+	background-size: 270px 36px;
+}
+#header {
+margin-left: 3%;
+margin-right: 3%;
+width: 94%;
+text-align: center;
+margin-bottom: 25px;
+font-family: ostrich;
+font-size: 64px;
+border-bottom: 2px solid white;
+}
+.entry {
+	box-shadow: 0 0 14px #FFFFFF;
+	margin-left: 3%;
+	margin-right: 3%;
+	position: relative;
+	width: 94%;
+	height: 80px;
+	background-color: #dbdbdb;
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+
+#main {
+	color:black;
+	box-shadow: 0 0 14px #FFFFFF;
+	margin-left: 3%;
+	margin-right: 3%;
+	position: relative;
+	width: 94.7%;
+	height: auto;
+	background-color: #FFFFFF;
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+
+.entry.state1 {
+	background-color: #70E072;
+}
+
+/* Switch image */
+.entry .switch {
+	position: absolute;
+	top: 16px;
+	left: 10px;
+	width: 53px;
+	height: 43px;
+	background: url('on_off.png') no-repeat;
+	background-position: 0 -49px;
+	background-size: 53px 87px;
+}
+
+.state1  .switch {
+	background-position: 0 0;
+}
+
+/* Switch name */
+.entry .info {
+	position: absolute;
+	top: 19px;
+	left: 80px;
+	color: #141414;
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: trench;
+	}
+
+.entry.state1 .info { color: #000; }
+
+
+/* Channel info */
+.entry .channel {
+	font-family: timeburn;
+	position: absolute;
+	top: 50px;
+	left: 80px;
+	color: #bbb;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.entry.state1 .channel { color: #777; }
+
+#button {
+font-family: trench;
+width: auto;
+text-decoration: none;
+font-size: 40px;
+background: red;
+color:black;
+border: none;
+text-align: center;
+padding: 7px;
+text-decoration: none;
+margin-right: 5px;
+margin-left: 5px;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.5s ease;
+}
+#button:hover {
+opacity:1;
+filter:alpha(opacity=100);
+-webkit-transform: scale(1.02);
+color:white;
+ }
+ 
+
+#cam{
+box-shadow: 0 0 14px #FFFFFF;
+	margin-left: 3%;
+	margin-right: 3%;
+	position: relative;
+	width: 94.7%;
+color: black;
+box-shadow: 0 0 14px #6E6E6E;
+padding: 10px;
+background: #DCDCDC;
+height: auto;
+}
+
+h1 {
+font-family: timeburn;
+border-bottom: 2px solid #898989;
+font-size: 46px;
+}
+
+@media screen and (max-width: 890px) {
+h1 {
+font-size: 32px;
+}
+
+.webcam {
+width: 95%;
+height: auto;
+margin-right:2.5%;
+margin-left:2.5%;
+}
+
+
+}
