@@ -21,7 +21,7 @@ $userInputPassword = $_POST['passwordInput'];
 $userInputPasswordHash = md5(md5(md5($userInputPassword))); 
 $userName = $_POST['userNameInput'];
 
-if($passwordInputHash == $passwordHash) { 
+if($userInputPasswordHash == $passwordHash) { 
 $_SESSION['userName'] = $userName;
 $sessionState = 1; // Control to one
 } else {
