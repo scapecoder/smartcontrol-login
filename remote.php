@@ -1,10 +1,10 @@
 <?php
 session_start();
 error_reporting(0);
-if($_SESSION['username'] == ""){
-$what = 0;
+if($_SESSION['userName'] == ""){
+$sessionState = 0;
 } else {
-$what = 1;
+$sessionState = 1;
 }
 
 include("config.php");
@@ -32,13 +32,13 @@ if (strlen($output) >= 8) {
 <html>
   <head>
     <title>SmartControl</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/style.css">
 <!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="ie.css" />
 <![endif]-->
 	<link rel="icon"
           type="image/png"
-          href="favicon.ico">
+          href="resources/favicon.ico">
 	<meta charset="UTF-8">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -57,9 +57,9 @@ SmartControl
 </div>
 
 <?php
-if($what == 1 && $_GET['destroy'] != "true") {
+if($sessionState == 1 && $_GET['destroy'] != "true") {
 ?>
-<?php echo '<div id="main"><div id="cont"><center><h1 style="color: black; font-family: trench;">Hallo, ' . $_SESSION['username'] . '</h1>
+<?php echo '<div id="main"><div id="cont"><center><h1 style="color: black; font-family: trench;">Hallo, ' . $_SESSION['userName'] . '</h1>
 <span class="logout">
 <a href="remote.php?destroy=true">LOGOUT</a>
 </span>
@@ -104,28 +104,8 @@ foreach($config as $current) {
   $index++;
 
 }
-  	?>
-	<!--
-	<div id="main">
-	<div id="cont">
-	<h1>
-	Webcam
-	</h1>
-	<?php
-	$length = 10;
-	$numb = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
-	?>
-	<a href="index.php?cmd=sudo%20cp%20/var/www/smarthome/bild.png%20/var/www/smarthome/bilder/<?php echo $numb; ?>.png">
-			<div id="button" style="width: 74%; margin-left: 13%; margin-right: 13%;">
-			Bild sichern!
-			</div>
-			</a>
-			<br />
-			<img src="bild.png" class="webcam">
-			</div>
-			</div> !-->
-	<?php
-} elseif($what == 0) {
+
+} elseif($sessionState == 0) {
 echo '<div id="main"><div id="cont">Du musst dich zuerst anmelden. Du wirst nun weitergeleitet!</div></div>';
 echo '<meta http-equiv="refresh" content="2; URL=index.php" />';
 
