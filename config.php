@@ -11,7 +11,7 @@
  * define ip address and port here
  */
 $source = $_SERVER['SERVER_ADDR'];
-$target = '192.168.43.222';
+$target = shell_exec("hostname -I");
 $port = 11337;
 
 /*
@@ -22,8 +22,8 @@ $port = 11337;
  *
  */
 $config=array(
-  array("00010", "02", "LED Streifen"),
-  array("00010", "01", "5.1 Anlage"),
-  array("00010", "03", "Bettlampe"),
+  array("00010", "01", "Gerät 1),
+  array("00010", "02", "Gerät 2"),
+  array("00010", "03", "Gerät 3"),
 )
 ?>
