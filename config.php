@@ -22,7 +22,7 @@ $port = 11337;
  *
  */
 $config=array(
-  array("00010", "01", "Gerät 1),
+  array("00010", "01", "Gerät 1"),
   array("00010", "02", "Gerät 2"),
   array("00010", "03", "Gerät 3"),
 )
